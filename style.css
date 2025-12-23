@@ -1,0 +1,36 @@
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    text-align: center;
+}
+.underline{
+    text-decoration: blue underline;
+}
+.blue-text{
+    color: blue;
+}
+#changeNumSquares:hover{
+    cursor: pointer;
+}
+.row-container{
+    display: flex;
+}
+.container{
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    margin: 0 auto;
+}
+.row-container{
+    gap: 0;
+}
+.single-square{
+    background-color: rgb(125, 123, 121, 20%);
+    border: 1px solid red;
+    height: calc(var(--singleSquareDimension) * 1px);
+    width: calc(var(--singleSquareDimension) * 1px);
+}
