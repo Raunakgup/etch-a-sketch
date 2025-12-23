@@ -1,34 +1,41 @@
-html{
+html {
     box-sizing: border-box;
 }
-*, *::before, *::after{
+
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
-body{
+
+body {
     text-align: center;
 }
-.underline{
+
+.underline {
     text-decoration: blue underline;
 }
-.blue-text{
+
+.blue-text {
     color: blue;
 }
-#changeNumSquares:hover{
+
+#change-num-squares:hover {
     cursor: pointer;
 }
-.row-container{
+
+.row-container {
     display: flex;
 }
-.container{
+
+.container {
     display: inline-flex;
     flex-direction: column;
     border: 1px solid blue;
     margin: 0 auto;
 }
-.row-container{
-    gap: 0;
-}
-.single-square{
+
+.single-square {
     background-color: rgb(125, 123, 121, 20%);
     border: 1px solid red;
     height: calc(var(--singleSquareDimension) * 1px);
