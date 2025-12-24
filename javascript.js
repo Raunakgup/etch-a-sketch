@@ -46,9 +46,9 @@ function setNumSquares() {
         if (isNaturalNumber(input)) {
             const num = Number(input);
             if (num > 100) {
-                alert("Max 100 squares per side is allowed. We have made the grid for 100 sq/side.")
-            }
-            numSquares = num;
+                alert("Max 100 squares per side; using 100.");
+                numSquares = 100;
+            } else numSquares = num;
             break;
         }
     }
@@ -72,7 +72,7 @@ function getRandomColor() {
     const g = getRandomNumber(255);
     const b = getRandomNumber(255);
     const opacity = 0.1;
-    return `rgb(${r},${g},${b},${opacity})`;
+    return `rgba(${r},${g},${b},${opacity})`;
 }
 function getOpacity(rgbaString) {
     const match = rgbaString.match(/rgba?\(\s*\d+\s*,\s*\d+\s*,\s*\d+(?:\s*,\s*([\d.]+))?\s*\)/);
