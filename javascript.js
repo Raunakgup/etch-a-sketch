@@ -3,6 +3,12 @@ let numSquares = 16;
 
 const container = document.querySelector(".container");
 const changeNumSquares = document.getElementById("change-num-squares");
+const clearGridButton = document.getElementById("clear-grid-button");
+const defaultColor = "#7D7B7933";
+document.documentElement.style.setProperty(
+  "--default-color",
+  defaultColor
+);
 
 function makeGrid(numSquares) {
     const singleSquareDimension = dimension / numSquares;
@@ -69,12 +75,23 @@ function changeSquareColor(targetSq) {
     const col = getRandomColor();
     targetSq.style.backgroundColor = `rgb(${col.r},${col.g},${col.b})`;
 }
+
+function setDefaultColor(){
+    const singleSquareList = document.querySelectorAll('.single-square');
+    singleSquareList.forEach(element => {
+        element.style.backgroundColor = defaultColor;
+    });
+}
+
 changeNumSquares.addEventListener("click", resetGrid);
 
 container.addEventListener("mousemove", (e) => {
     if (!e.target.classList.contains("single-square")) return;
     changeSquareColor(e.target);
 });
+
+clearGridButton.addEventListener("click", setDefaultColor);
+
 
 
 
